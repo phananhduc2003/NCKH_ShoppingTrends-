@@ -1,0 +1,68 @@
+.wrapper {
+    background-color: #383854;
+    .title {
+        min-width: 100px;
+
+        .title-text {
+            font-size: 40px;
+            line-height: var(--line-height);
+            font-weight: 600;
+            color: #ffff;
+            margin-top: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            white-space: pre-wrap;
+        }
+    }
+    .box-title {
+        min-height: 100px;
+        background-color: #2e2e48;
+        margin-top: 16px;
+        border-radius: 5px;
+
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px,
+            rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+
+    .bar-item-purchased {
+        height: 440px;
+        background-color: #2e2e48;
+        margin-top: 16px;
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px,
+            rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+    .bar-color {
+        height: 440px;
+        background-color: #2e2e48;
+        margin-top: 16px;
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px,
+            rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+    .Pie-shipping-type {
+        min-height: 370px;
+        background-color: #2e2e48;
+        margin-top: 16px;
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px,
+            rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+    .Pie-preferred-paymentMethod {
+        min-height: 370px;
+        background-color: #2e2e48;
+        margin-top: 16px;
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px,
+            rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+    .bar-season {
+        height: 370px;
+        background-color: #2e2e48;
+        margin-top: 16px;
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px,
+            rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+}

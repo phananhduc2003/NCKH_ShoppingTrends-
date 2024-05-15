@@ -1,0 +1,12 @@
+.wrapper {
+    height: 260px;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    .dataCard {
+        padding: 1em;
+        width: 100%;
+        height: 100%;
+    }
+}

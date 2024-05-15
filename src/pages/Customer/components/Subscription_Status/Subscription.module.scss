@@ -1,0 +1,56 @@
+.wrapper {
+    display: flex;
+    justify-content: space-around;
+    .box-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        .title-percent-Sub {
+            display: flex;
+            .wrapper-icon {
+                position: relative;
+                width: auto;
+                height: auto;
+                .icon-yes {
+                    position: absolute;
+                    color: #fff;
+                    font-size: 24px;
+                    top: 3px;
+                }
+                .icon-no {
+                    position: absolute;
+                    color: #fff;
+                    font-size: 24px;
+                    top: 3px;
+                }
+            }
+            .wrapper-text {
+                .text-yes-no {
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: #fff;
+                    margin-left: 28px;
+                }
+                .text-Sub {
+                    margin-left: 8px;
+                    font-size: 24px;
+                    font-weight: 800;
+                    color: #f8d49b;
+                }
+            }
+        }
+    }
+    .box-doughnut {
+        position: relative;
+        width: 190px;
+        height: 180px;
+        .doughnut {
+            display: block;
+            box-sizing: border-box;
+            height: 170px;
+            width: 190px;
+            position: absolute;
+            top: -4px;
+        }
+    }
+}
