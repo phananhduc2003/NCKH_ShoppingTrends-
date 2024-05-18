@@ -1,0 +1,32 @@
+.wrapper {
+    display: grid;
+    .wrapper-title {
+        display: flex;
+        justify-content: center;
+        .icon {
+            font-size: 24px;
+
+            color: #fff;
+        }
+        .title {
+            margin-top: 8px;
+            margin-left: 8px;
+            font-weight: 400;
+            text-align: center;
+            font-size: 16px;
+            color: #fff;
+        }
+    }
+    .box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+
+        .value {
+            font-size: 36px;
+            font-weight: 800;
+            color: #f8d49b;
+        }
+    }
+}

@@ -9,6 +9,7 @@ import styles from './Customer.module.scss';
 import AgeRange from './components/AgeRange/AgeRange';
 import PercentGender from './components/Percent_Gender/PercentGender';
 import Subscription from './components/Subscription_Status/Subscription';
+import TotalCustomer from './components/Total_Customers/TotalCustomer';
 const cx = classNames.bind(styles);
 
 function Customer() {
@@ -29,7 +30,7 @@ function Customer() {
                 </div>
                 <div className={cx('col', 'l-2-4')}>
                     <div className={cx('box-title')}>
-                        <BoxTitle title="Total Customers" data="99,5K" />
+                        <TotalCustomer />
                     </div>
                 </div>
                 <div className={cx('col', 'l-2-4')}>

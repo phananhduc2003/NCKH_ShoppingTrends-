@@ -24,6 +24,7 @@ const FormPredict = () => {
     });
     const [predictionResult, setPredictionResult] = useState('');
 
+    const [isLoading, setIsLoading] = useState(false);
     const handleSubmit = (event) => {
         event.preventDefault();
 
@@ -35,17 +36,23 @@ const FormPredict = () => {
         formData.set('previousPurchases', previousPurchasesValue);
         const reviewRatingValue = mapReviewRatingToValue(parseFloat(formData.get('reviewRating')));
         formData.set('reviewRating', reviewRatingValue);
-        for (var pair of formData.entries()) {
-            console.log(pair[0] + ', ' + pair[1]);
-        }
+
+        // Set isLoading to true to indicate loading
+        setIsLoading(true);
+
         axios
             .post('http://localhost:5000/predict', formData)
             .then((response) => {
-                console.log(response.data);
                 setPredictionResult(response.data.prediction);
             })
             .catch((error) => {
                 console.error('Error:', error);
+            })
+            .finally(() => {
+                // Set isLoading to false after receiving response or error
+                setTimeout(() => {
+                    setIsLoading(false);
+                }, 3000); // Thiết lập thời gian delay 3000ms (3 giây) trước khi dừng hiệu ứng loading
             });
     };
 
@@ -82,28 +89,16 @@ const FormPredict = () => {
     };
 
     const mapAgeToValue = (age) => {
-        if (age >= 18 && age <= 30) {
-            return '1';
-        } else if (age >= 31 && age <= 45) {
-            return '2';
-        } else if (age >= 46 && age <= 60) {
-            return '3';
-        } else if (age >= 61 && age <= 70) {
-            return '4';
+        if (age >= 1 && age <= 125) {
+            return age;
         } else {
-            return ''; // Return empty string for other cases
+            return '125'; // Return empty string for other cases
         }
     };
 
     const mapPreviousPurchasesToValue = (previousPurchases) => {
-        if (previousPurchases >= 1 && previousPurchases <= 10) {
+        if (previousPurchases >= 1) {
             return '1';
-        } else if (previousPurchases >= 11 && previousPurchases <= 40) {
-            return '2';
-        } else if (previousPurchases > 40) {
-            return '3';
-        } else {
-            return ''; // Return empty string for other cases
         }
     };
 
@@ -334,7 +329,7 @@ const FormPredict = () => {
                     <select
                         className={cx('form-control')}
                         name="paymentMethod"
-                        value={inputData.preferredPaymentMethod}
+                        value={inputData.paymentMethod}
                         onChange={handleChange}
                     >
                         <option value="">Select Payment Method</option>
@@ -477,7 +472,9 @@ const FormPredict = () => {
                 </div>
             </form>
 
-            <div className={cx('result')}>Kết quả dự đoán: {predictionResult}</div>
+            <div className={cx('result', { loading: isLoading })}>
+                {isLoading ? '' : `Kết quả dự đoán: ${predictionResult}`}
+            </div>
         </div>
     );
 };

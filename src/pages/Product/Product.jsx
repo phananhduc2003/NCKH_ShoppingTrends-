@@ -4,6 +4,9 @@ import BarItemPurchased from './components/Bar_Item_Purchased/BarItemPurchased';
 import DoughnutCategory from './components/Doughnut_Category/DoughnutCategory';
 import DoughnutSize from './components/Doughnut_Size/DoughnutSize';
 import BarColor from './components/Bar_Color/BarColor';
+import TopCategory from './components/Top_Category/TopCategory';
+import TopSize from './components/TopSize/TopSize';
+import TopItem from './components/TopItemsPurchased/TopItempurchaesd';
 const cx = classNames.bind(styles);
 
 function Product() {
@@ -18,13 +21,19 @@ function Product() {
                     </div>
                 </div>
                 <div className={cx('col', 'l-2-4')}>
-                    <div className={cx('box-title')}></div>
+                    <div className={cx('box-title')}>
+                        <TopCategory />
+                    </div>
                 </div>
                 <div className={cx('col', 'l-2-4')}>
-                    <div className={cx('box-title')}></div>
+                    <div className={cx('box-title')}>
+                        <TopItem />
+                    </div>
                 </div>
                 <div className={cx('col', 'l-2-4')}>
-                    <div className={cx('box-title')}></div>
+                    <div className={cx('box-title')}>
+                        <TopSize />
+                    </div>
                 </div>
             </div>
             <div className={cx('row')}>
