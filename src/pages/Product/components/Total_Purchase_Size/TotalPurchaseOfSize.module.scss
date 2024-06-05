@@ -1,0 +1,21 @@
+.wrapper {
+    display: grid;
+    .span {
+        text-align: center;
+        line-height: 40px;
+        height: 80px;
+        font-size: 18px;
+        font-weight: 600;
+        color: #fff;
+    }
+    .ul {
+        .li {
+            height: 70px;
+            font-size: 24px;
+            font-weight: 800;
+            color: #f8d49b;
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+}

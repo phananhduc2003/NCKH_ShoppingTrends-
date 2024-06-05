@@ -23,9 +23,7 @@ function TopItem() {
                 <span className={cx('title')}>Top Item</span>
             </div>
             <div className={cx('box')}>
-                <div className={cx('value')}>
-                    {mostPurchasedItem}: {itemCount[mostPurchasedItem]}
-                </div>
+                <div className={cx('value')}>{mostPurchasedItem}</div>
             </div>
         </div>
     );

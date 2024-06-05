@@ -14,11 +14,12 @@ function Sidebar() {
                 <div className={cx('sidebar-top')}>
                     <div className={cx('sidebar-brand')}>
                         <img src={LogoWhite} alt="" />
-                        <span className={cx('sidebar-brand-text')}>tabernam.</span>
+                        <span className={cx('sidebar-brand-text')}>tabernam</span>
                     </div>
                 </div>
                 <MenuItem title="Product" to={config.routes.home} />
                 <MenuItem title="Customer" to={config.routes.page1} />
+                <MenuItem title="Customer Segment" to={config.routes.page3} />
                 <MenuItem title="Predict" to={config.routes.page2} />
             </Menu>
         </aside>

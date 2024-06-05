@@ -7,6 +7,7 @@ import BarColor from './components/Bar_Color/BarColor';
 import TopCategory from './components/Top_Category/TopCategory';
 import TopSize from './components/TopSize/TopSize';
 import TopItem from './components/TopItemsPurchased/TopItempurchaesd';
+import TotalPurchaseOfSize from './components/Total_Purchase_Size/TotalPurchaseOfSize';
 const cx = classNames.bind(styles);
 
 function Product() {
@@ -48,7 +49,9 @@ function Product() {
                     </div>
                 </div>
                 <div className={cx('col', 'l-4')}>
-                    <div className={cx('bar-season')}></div>
+                    <div className={cx('bar-season')}>
+                        <TotalPurchaseOfSize />
+                    </div>
                 </div>
             </div>
             <div className={cx('row')}>

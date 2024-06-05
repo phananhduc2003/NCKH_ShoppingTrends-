@@ -182,7 +182,7 @@ const FormPredict = () => {
                         className={cx('form-control')}
                         type="text"
                         name="age"
-                        placeholder="age: 18 -> 70"
+                        autoComplete="off"
                         value={inputData.age}
                         onChange={handleAgeChange}
                     />
@@ -269,8 +269,8 @@ const FormPredict = () => {
                     <input
                         className={cx('form-control')}
                         type="text"
+                        autoComplete="off"
                         name="previous_purchases"
-                        placeholder="1 -> 100"
                         value={inputData.previousPurchases}
                         onChange={handlePreviousPurchasesChange}
                     />
@@ -318,6 +318,7 @@ const FormPredict = () => {
                         className={cx('form-control')}
                         type="text"
                         name="reviewRating"
+                        autoComplete="off"
                         placeholder="0 -> 5"
                         value={inputData.reviewRating}
                         onChange={handleReviewRatingChange}
@@ -472,9 +473,7 @@ const FormPredict = () => {
                 </div>
             </form>
 
-            <div className={cx('result', { loading: isLoading })}>
-                {isLoading ? '' : `Kết quả dự đoán: ${predictionResult}`}
-            </div>
+            <div className={cx('result', { loading: isLoading })}>{isLoading ? '' : `Predict ${predictionResult}`}</div>
         </div>
     );
 };

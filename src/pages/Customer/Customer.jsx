@@ -35,7 +35,7 @@ function Customer() {
                 </div>
                 <div className={cx('col', 'l-2-4')}>
                     <div className={cx('box-title')}>
-                        <BoxTitle title="Average Age" data="43,4" />
+                        <BoxTitle title="Average Age" data="44" />
                     </div>
                 </div>
             </div>

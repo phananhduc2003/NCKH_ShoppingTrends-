@@ -30,7 +30,7 @@ function BarColor() {
         datasets: [
             {
                 label: 'Color',
-                backgroundColor: '#6F88FC',
+                backgroundColor: '#557B83',
                 borderColor: 'rgba(0,0,0,1)',
                 data: labels.map((label) => frequencyCount[label]),
             },
