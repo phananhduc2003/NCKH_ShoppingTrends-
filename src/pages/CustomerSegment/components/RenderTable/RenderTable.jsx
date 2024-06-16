@@ -12,24 +12,46 @@ const cx = classNames.bind(styles);
 
 function RenderTable() {
     const [customers, setCustomers] = useState(diamondCustomers);
+    const [currentCategory, setCurrentCategory] = useState('Diamond Customers');
+
+    const handleButtonClick = (category, customers) => {
+        setCustomers(customers);
+        setCurrentCategory(category);
+    };
+
     return (
         <div className={cx('wrapper')}>
             <div className={cx('button')}>
-                <button className={cx('btn m-2', 'button-color')} onClick={() => setCustomers(diamondCustomers)}>
+                <button
+                    className={cx('btn m-2', 'button-color')}
+                    onClick={() => handleButtonClick('Diamond Customers', diamondCustomers)}
+                >
                     Diamond Customers
                 </button>
-                <button className={cx('btn m-2', 'button-color')} onClick={() => setCustomers(goldCustomers)}>
+                <button
+                    className={cx('btn m-2', 'button-color')}
+                    onClick={() => handleButtonClick('Gold Customers', goldCustomers)}
+                >
                     Gold Customers
                 </button>
-                <button className={cx('btn m-2', 'button-color')} onClick={() => setCustomers(silverCustomers)}>
+                <button
+                    className={cx('btn m-2', 'button-color')}
+                    onClick={() => handleButtonClick('Silver Customers', silverCustomers)}
+                >
                     Silver Customers
                 </button>
-                <button className={cx('btn m-2', 'button-color')} onClick={() => setCustomers(bronzeCustomers)}>
+                <button
+                    className={cx('btn m-2', 'button-color')}
+                    onClick={() => handleButtonClick('Bronze Customers', bronzeCustomers)}
+                >
                     Bronze Customers
                 </button>
             </div>
+
+            <div className={cx('title')}>Table {currentCategory}</div>
+
             <div className={cx('table-responsive-sm', 'wrapper-table')}>
-                <table className={cx('table table-borderless table-hover table-sm  ', 'custom-table')}>
+                <table className={cx('table table-borderless table-hover table-sm', 'custom-table')}>
                     <thead>
                         <tr>
                             <th className={cx('scope="col"', 'title-table')}>Customer ID</th>

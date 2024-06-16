@@ -12,9 +12,17 @@
             font-weight: 600;
         }
     }
+    .title {
+        display: flex;
+        justify-content: center;
+        margin-top: 24px;
+        color: #fff;
+        font-size: 28px;
+        font-weight: 600;
+    }
 
     .wrapper-table {
-        height: 80vh;
+        height: 70vh;
         overflow-y: scroll;
         margin: 16px 16px 0 16px;
         font-weight: 400;
